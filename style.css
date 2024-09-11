@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #9B0C24;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#navbar {
+    background-color: #600003;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#navbar a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background-color .3s;
+    color: white;
+    white-space: nowrap;
+}
+
+#navbar a:hover {
+    background-color: #7D001C;
+}
+
+#navbar img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#nav2 ul {
+    display: flex;
+    flex: 1 1 0;
+}
+
+#nav2 ul li {
+    flex: 1 1 0;
+}
+
+footer {
+    background-color: #600003;
+    color: white;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#footer_links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#footer_links a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    transition: background-color .3s;
+    white-space: nowrap;
+}
+
+#footer_links a:hover {
+    background-color: #7D001C;
+}
+
+#footer_links img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#footer_copyright :hover {
+    background-color: #7D001C;
+}
+
+#footer_copyright p {
+    transition: background-color .3s;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    flex: 1;
+}
+
+#logoContainer {
+    max-width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.7em;
+}
+
+#logoContainer img {
+    border: 2px solid white;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    animation: pulsate 1.5s infinite;
+}
+
+#logoContainer p {
+    transition: transform 0.3s ease;
+}
+
+#logoContainer p:hover {
+    transform: scale(1.03);
+}
+
+#logoContainer {
+    transition: background-color 0.3s ease;
+}
+
+#logoContainer:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+#logoContainer,
+#shortDescription,
+#releaseDate {
+    border: 2px solid white;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#shortDescription p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 1px solid white;
+    transition: transform 0.3s ease;
+}
+
+#shortDescription p:hover {
+    transform: scale(1.02);
+}
+
+#shortDescription {
+    transition: background-color 0.3s ease;
+}
+
+#shortDescription:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#releaseDate p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    letter-spacing: 0.3em;
+    transition: transform 0.3s ease;
+}
+
+#releaseDate p:hover {
+    transform: scale(1.03);
+}
+
+#releaseDate {
+    transition: background-color 0.3s ease;
+}
+
+#releaseDate:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#countDown {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    border: 2px solid white;
+    margin: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+#countDown {
+    transition: background-color 0.3s ease;
+}
+
+#countDown:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#countDown p {
+    transition: transform 0.3s ease;
+}
+
+#countDown p:hover {
+    transform: scale(1.03);
+}
+
+#notifySection {
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 20px 20px;
+    text-align: center;
+}
+
+#notifySection h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+#notifySection h1:hover {
+    transform: scale(1.03);
+}
+
+#notifySection p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+#notifySection p:hover {
+    transform: scale(1.01);
+}
+
+#notifyForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#notifyForm input[type="email"] {
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#notifyForm button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+    background-color: #600003;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#notifyForm button:hover {
+    background-color: #7D001C;
+}
+
+#notifySection {
+    transition: background-color 0.3s ease;
+}
+
+#notifySection:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (min-width:768px) {
+    #navbar ul {
+        display: flex;
+    }
+
+    #navbar ul li {
+        flex: 1 1 0;
+    }
+
+    #navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #navbar img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    #nav2 li a {
+        display: flex;
+        align-items: center;
+    }
+
+    #footer_links ul {
+        display: flex;
+    }
+
+    #footer_links ul li {
+        flex: 1 1 0;
+    }
+
+    #footer_links img {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+}
