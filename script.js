@@ -14,10 +14,10 @@ function updateCountdown() {
         return num < 10 ? "0" + num : num;
     }
 
-    document.getElementById("days").innerHTML = addZero(days);
-    document.getElementById("hours").innerHTML = addZero(hours);
-    document.getElementById("minutes").innerHTML = addZero(minutes);
-    document.getElementById("seconds").innerHTML = addZero(seconds);
+    document.getElementById("days").innerHTML = "Days:"+addZero(days);
+    document.getElementById("hours").innerHTML = "Hours:"+addZero(hours);
+    document.getElementById("minutes").innerHTML = "Minutes:"+addZero(minutes);
+    document.getElementById("seconds").innerHTML = "Seconds:"+addZero(seconds);
 
     if (timeRemaining < 0) {
         clearInterval(interval);

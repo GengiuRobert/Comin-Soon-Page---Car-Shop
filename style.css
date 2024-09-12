@@ -1,9 +1,26 @@
+:root {
+    --bodyColor: #9B0C24;
+    --navbarColor: #600003;
+    --navbarColorHover: #7D001C;
+    --footerColor: #600003;
+    --footerColorHover: #7D001C;
+    --buttonColor: #600003;
+    --buttonColorHover: darkblue;
+    --textColor: white;
+    --borderColor: white;
+    --containerColorHover: rgba(255, 255, 255, 0.1);
+    --fontNavbar: 'Courier New', Courier, monospace;
+    --fontFooter: 'Courier New', Courier, monospace;
+    --fontContainers: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 * {
     box-sizing: border-box;
 }
 
+/* body css */
 body {
-    background-color: #9B0C24;
+    background-color: var(--bodyColor);
     padding: 0;
     margin: 0;
     display: flex;
@@ -11,44 +28,42 @@ body {
     min-height: 100vh;
 }
 
+/* header and navbar css */
 header {
     width: 100%;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--fontNavbar);
     font-weight: bold;
     font-size: larger;
 }
 
 #navbar {
-    background-color: #600003;
+    background-color: var(--navbarColor);
     max-width: 100%;
     overflow-x: hidden;
 }
 
-#navbar ul {
+#navbar ul,
+#footer_links ul {
     list-style-type: none;
     padding: 0;
     margin: 0 auto;
 }
 
-#navbar a {
+#navbar a,
+#footer_links a {
     text-align: center;
     text-decoration: none;
     display: block;
     padding: 10px;
     transition: background-color .3s;
-    color: white;
+    color: var(--textColor);
     white-space: nowrap;
 }
 
-#navbar a:hover {
-    background-color: #7D001C;
-}
-
-#navbar img {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    vertical-align: middle;
+#navbar a:hover,
+#footer_links a:hover,
+#footer_copyright :hover {
+    background-color: var(--navbarColorHover);
 }
 
 #nav2 ul {
@@ -60,91 +75,55 @@ header {
     flex: 1 1 0;
 }
 
+/* footer css */
 footer {
-    background-color: #600003;
-    color: white;
+    background-color: var(--footerColor);
+    color: var(--textColor);
     width: 100%;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--fontFooter);
     font-weight: bold;
     font-size: larger;
 }
 
-#footer_links ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto;
-}
-
-#footer_links a {
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    padding: 10px;
-    transition: background-color .3s;
-    white-space: nowrap;
-}
-
-#footer_links a:hover {
-    background-color: #7D001C;
-}
-
-#footer_links img {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-#footer_copyright :hover {
-    background-color: #7D001C;
-}
-
 #footer_copyright p {
+    font-size: large;
     transition: background-color .3s;
     text-align: center;
     padding: 10px;
 }
 
+/* main css */
 main {
     flex: 1;
-}
-
-#logoContainer {
-    max-width: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    font-size: 3em;
-    color: white;
-    text-align: center;
-    letter-spacing: 0.7em;
+    overflow-x: hidden;
 }
 
 #logoContainer img {
-    border: 2px solid white;
+    border: 2px solid var(--borderColor);
     border-radius: 10px;
     max-width: 100%;
     height: auto;
     animation: pulsate 1.5s infinite;
 }
 
-#logoContainer p {
-    transition: transform 0.3s ease;
+#logoContainer p:hover,
+#shortDescription p:hover,
+#releaseDate p:hover,
+#countDown p:hover,
+#notifySection p:hover,
+#notifySection h1:hover {
+    transform: scale(1.02);
 }
 
-#logoContainer p:hover {
-    transform: scale(1.03);
+#logoContainer:hover,
+#shortDescription:hover,
+#releaseDate:hover,
+#countDown:hover,
+#notifySection:hover {
+    background-color: var(--containerColorHover);
 }
 
-#logoContainer {
-    transition: background-color 0.3s ease;
-}
-
-#logoContainer:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-
+/* custom transition css */
 @keyframes pulsate {
     0% {
         transform: scale(1);
@@ -157,115 +136,41 @@ main {
 
 #logoContainer,
 #shortDescription,
-#releaseDate {
-    border: 2px solid white;
+#releaseDate,
+#countDown,
+#notifySection {
+    border: 2px solid var(--borderColor);
     margin: 20px;
     border-radius: 10px;
+    transition: background-color 0.3s ease;
+    max-width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
-#shortDescription p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+#shortDescription p,
+#releaseDate p,
+#notifySection p,
+#logoContainer p,
+#countDown p,
+#countDown span,
+#notifySection h1 {
+    font-family: var(--fontContainers);
     font-weight: bold;
-    font-size: 1.5em;
-    color: white;
+    color: var(--textColor);
     padding: 15px;
     text-align: center;
-    border-radius: 1px solid white;
     transition: transform 0.3s ease;
+    font-size: 2em;
 }
 
-#shortDescription p:hover {
-    transform: scale(1.02);
-}
-
-#shortDescription {
-    transition: background-color 0.3s ease;
-}
-
-#shortDescription:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+#logoContainer p {
+    font-size: 3em;
+    letter-spacing: 0.5em;
 }
 
 #releaseDate p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    font-size: 2em;
-    color: white;
-    padding: 15px;
-    text-align: center;
     letter-spacing: 0.3em;
-    transition: transform 0.3s ease;
-}
-
-#releaseDate p:hover {
-    transform: scale(1.03);
-}
-
-#releaseDate {
-    transition: background-color 0.3s ease;
-}
-
-#releaseDate:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-#countDown {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    border: 2px solid white;
-    margin: 20px;
-    padding-bottom: 10px;
-    border-radius: 10px;
-}
-
-#countDown {
-    transition: background-color 0.3s ease;
-}
-
-#countDown:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-#countDown p {
-    transition: transform 0.3s ease;
-}
-
-#countDown p:hover {
-    transform: scale(1.03);
-}
-
-#notifySection {
-    border-radius: 10px;
-    border: 2px solid white;
-    margin: 20px 20px;
-    text-align: center;
-}
-
-#notifySection h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2em;
-    color: white;
-    transition: transform 0.3s ease;
-}
-
-#notifySection h1:hover {
-    transform: scale(1.03);
-}
-
-#notifySection p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    font-size: 1.5em;
-    color: white;
-    padding: 5px;
-    transition: transform 0.3s ease;
-}
-
-#notifySection p:hover {
-    transform: scale(1.01);
 }
 
 #notifyForm {
@@ -276,23 +181,23 @@ main {
 
 #notifyForm input[type="email"] {
     font-size: 1.5em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--fontContainers);
     font-weight: bold;
     width: 100%;
     max-width: 300px;
-    border: 2px solid white;
+    border: 2px solid var(--borderColor);
     border-radius: 5px;
     margin-bottom: 10px;
     text-align: center;
 }
 
 #notifyForm button {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--fontContainers);
     font-weight: bold;
     font-size: 1.5em;
-    color: white;
-    background-color: #600003;
-    border: 2px solid white;
+    color: var(--textColor);
+    background-color: var(--buttonColor);
+    border: 2px solid var(--borderColor);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -301,23 +206,19 @@ main {
 }
 
 #notifyForm button:hover {
-    background-color: #7D001C;
+    background-color: var(--buttonColorHover);
 }
 
-#notifySection {
-    transition: background-color 0.3s ease;
-}
-
-#notifySection:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
+/* repsonsive css, for bigger screens, navbar footer related */
 @media screen and (min-width:768px) {
-    #navbar ul {
+
+    #navbar ul,
+    #footer_links ul {
         display: flex;
     }
 
-    #navbar ul li {
+    #navbar ul li,
+    #footer_links ul li {
         flex: 1 1 0;
     }
 
@@ -326,31 +227,16 @@ main {
         justify-content: space-between;
     }
 
-    #navbar img {
-        width: 20px;
-        height: 20px;
-        margin-right: 10px;
-        vertical-align: middle;
-    }
-
     #nav2 li a {
         display: flex;
         align-items: center;
     }
 
-    #footer_links ul {
-        display: flex;
-    }
-
-    #footer_links ul li {
-        flex: 1 1 0;
-    }
-
+    #navbar img,
     #footer_links img {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         margin-right: 10px;
         vertical-align: middle;
     }
-
 }
