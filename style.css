@@ -75,6 +75,14 @@ header {
     flex: 1 1 0;
 }
 
+#navbar img,
+#footer_links img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 /* footer css */
 footer {
     background-color: var(--footerColor);
@@ -166,7 +174,7 @@ main {
 
 #logoContainer p {
     font-size: 3em;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.4em;
 }
 
 #releaseDate p {
@@ -230,13 +238,5 @@ main {
     #nav2 li a {
         display: flex;
         align-items: center;
-    }
-
-    #navbar img,
-    #footer_links img {
-        width: 20px;
-        height: 20px;
-        margin-right: 10px;
-        vertical-align: middle;
     }
 }
